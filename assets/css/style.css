@@ -1,0 +1,86 @@
+body {
+    height: 100vh;
+}
+
+#boardGame {
+    height: 40%;
+    position: relative;
+}
+
+#contentGames {
+    height: 60%;
+    background-color: #e9cd9c;
+}
+
+.circleSize {
+    width: 100px;
+    height: 100px;
+}
+
+.heightJeu {
+    height: 150px;
+}
+
+.imgTable {
+    background-image: url(../img/tableOrdi.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 8em;
+}
+
+.imgHead {
+    height: 120px;
+    width: 120px;
+    /* display: none; */
+    /* opacity: 0; */
+}
+
+.buttonRulesAndStart {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.titleScore {
+    position: absolute;
+    top: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#chronoPoints {
+    position: absolute;
+    font-size: 20px;
+}
+
+.imgContainer {
+    min-width: 100%;
+    min-height: 100%;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#gameTitle {
+    margin-top: 40px;
+    font-size: 30px;
+    background-color: white;
+    border: black solid 1px;
+}
+
+.rules {
+    font-size: 17px;
+    color: white;
+    width: 70%;
+    background-color: #6F837A;
+    border-radius: 10px;
+    border: black solid 1px;
+}
+
+#qrcode {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+}
