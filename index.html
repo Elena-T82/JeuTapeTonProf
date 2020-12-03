@@ -44,13 +44,13 @@
                 <p class="px-3 pt-3">Tu as toujours rêvé de taper ton professeur méchant ?! "Tape ton prof" te le permet ! Le but du jeu ressemble au tape taupe, mais c'est tes profs qu'il faut frapper (ça marche aussi avec les formateurs...) ! Les têtes de tes profs préférés
                     apparaissent à l'écran de façon aléatoire. Déchaines-toi et tape le plus vite possible sur leurs têtes ! Le jeu est infini est s'arrête quand les profs auront eu raison de toi en étant trop rapide pour esquiver tes claques !
                 </p>
-                <p class="px-3">Déchaînes-toi !!!</p>
+                <p class="px-3">Déchaîne-toi !!!</p>
             </div>
         </div>
 
         <div class="row my-4">
             <div class="col-12 text-center">
-                <img id="qrcode" src="assets/img/frame (1).png" alt="qrcode">
+                <img id="qrcode" src="assets/img/qrcode.png" alt="qrcode">
             </div>
         </div>
     </div>
@@ -118,7 +118,7 @@
                         de façon aléatoire. Déchaines-toi et tape le plus vite possible sur leurs têtes ! Le jeu est infini est s'arrête quand les potes auront eu raison de toi en étant trop rapide pour esquiver tes claques !
                     </p>
                     <p>
-                        Déchaînes-toi !!!
+                        Déchaîne-toi !!!
                     </p>
                 </div>
                 <div class="modal-footer">
@@ -128,19 +128,44 @@
         </div>
     </div>
 
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Modal de fin de jeu -->
+    <div class="modal" tabindex="-1" id="modalGameOver">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center">Vous avez perdu !</h5>
+                </div>
+                <div class="modal-body">
+                    <p class="text-justify">
+                        Vous avez été submergé par vos professeurs. Ils ont eu raison de vous...
+                    </p>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+                    <p id="ResultatTimerJeu"></p>
+                    <p id="ResultatScore"></p>
+
+
+                    <p>Prenez votre revanche.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary closeGameOverModal" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JQuery -->
+    <script type=" text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js "></script>
 
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js "></script>
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js "></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js "></script>
     <!-- Main js -->
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js "></script>
 </body>
 
 </html>

@@ -16,6 +16,9 @@ $(document).ready(function() {
 
     let verifTimer = false;
 
+    var tabSlotImage = $(".imgTable");
+
+
     var headArray = ["<img class='imgHead' src='assets/img/Anousone-Mounivongs-400.png' alt='tête Anousone'>", "<img class='imgHead' src='assets/img/frederik-noel-formateur-la-manu-formation.png' alt='tête_Fred'>", "<img class='imgHead' src='assets/img/Nicolas-Vallois-400.png' alt='tête Nicolas'>"];
 
     let soundA = document.getElementById("soundA");
@@ -26,9 +29,7 @@ $(document).ready(function() {
     var vie = 5;
     var difficulty = 0;
 
-    let headOnScreenCount = 0;
-    let headMax = 9;
-
+    var chrono;
 
 
 
@@ -55,9 +56,9 @@ $(document).ready(function() {
     function activateClock() {
         if (verifTimer) {
             addHead();
-            setInterval(clock, 1000);
+            chrono = setInterval(clock, 1000);
         } else {
-            // setTimeout(clock, 0);
+            // clearInterval(Chrono);
         }
     }
 
@@ -77,10 +78,7 @@ $(document).ready(function() {
     }
 
 
-
     function addHead() {
-
-        var tabSlotImage = $(".imgTable");
 
         var randomPosition = Math.floor(Math.random() * tabSlotImage.length);
         var randomHead = Math.floor(Math.random() * headArray.length);
@@ -155,14 +153,16 @@ $(document).ready(function() {
             // si c'est déjà vide on fait rien.
 
         } else {
-            $(slotImage).children().fadeOut(400);
-            // $(slotImage).empty();
+            $(slotImage).empty();
             vie--;
 
             if (vie == 0) {
                 verifTimer = false;
-                activateClock();
                 $("#startGame").text("Rejouer");
+                $("#modalGameOver").modal('show');
+                $("#ResultatTimerJeu").text(hour + ":" + min + ":" + sec);
+                $("#ResultatScore").text(score);
+
             }
             console.log(vie);
         }
@@ -170,6 +170,32 @@ $(document).ready(function() {
         if (verifTimer) {
             addHead();
         }
+    }
+
+    $(".closeGameOverModal").click(function() {
+
+        interval = 1500;
+
+        stopChrono();
+
+        sec = 00;
+        min = 00;
+        hour = 00;
+
+        score = 0;
+        vie = 5;
+        difficulty = 0;
+
+        $("#timerJeu").text(hour + ":" + min + ":" + sec);
+        $("#score").text(score);
+
+        $("#startGame").removeAttr("disabled");
+    })
+
+    function stopChrono() {
+
+        clearInterval(chrono);
+
     }
 
 });
