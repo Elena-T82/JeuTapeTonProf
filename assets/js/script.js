@@ -124,7 +124,7 @@ $(document).ready(function() {
                 } else if (difficulty <= 40) {
                     interval = 300;
                 } else if (difficulty > 40) {
-                    interval = 200;
+                    interval = 250;
                 }
 
 
