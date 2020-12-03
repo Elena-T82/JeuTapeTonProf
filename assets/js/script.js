@@ -121,10 +121,8 @@ $(document).ready(function() {
                     interval = 800;
                 } else if (difficulty <= 30) {
                     interval = 600;
-                } else if (difficulty <= 40) {
+                } else if (difficulty > 30) {
                     interval = 300;
-                } else if (difficulty > 40) {
-                    interval = 250;
                 }
 
 
