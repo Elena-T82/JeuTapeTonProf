@@ -116,16 +116,16 @@ $(document).ready(function() {
                     interval = 1000;
                 } else if (difficulty <= 10) {
                     score += 60;
-                    interval = 800;
+                    interval = 900;
                 } else if (difficulty <= 20) {
                     score += 100;
-                    interval = 600;
+                    interval = 800;
                 } else {
-                    interval = 500;
+                    interval = 700;
                 }
 
                 if (score > 1000) {
-                    interval = 400;
+                    interval = 600;
                 }
 
                 difficulty++;
