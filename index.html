@@ -129,7 +129,7 @@
     </div>
 
     <!-- Modal de fin de jeu -->
-    <div class="modal" tabindex="-1" id="modalGameOver">
+    <div class="modal" tabindex="-1" id="modalGameOver" data-backdrop="false">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -140,11 +140,11 @@
                         Vous avez été submergé par vos professeurs. Ils ont eu raison de vous...
                     </p>
 
-                    <p id="ResultatTimerJeu"></p>
-                    <p id="ResultatScore"></p>
+                    <p>Votre temps : <span id="ResultatTimerJeu"></span></p>
+                    <p>Votre score : <span id="ResultatScore"></span></p>
 
 
-                    <p>Prenez votre revanche.</p>
+                    <p>Prenez votre revanche !</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary closeGameOverModal" data-dismiss="modal">Fermer</button>

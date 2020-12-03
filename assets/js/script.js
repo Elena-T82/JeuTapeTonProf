@@ -98,8 +98,6 @@ $(document).ready(function() {
             // si on clique sur une tête, le score augmente.
             $(slotViser).children().click(function() {
                 let randomSound = Math.floor(Math.random() * 2);
-                score++;
-                $("#score").text(score);
 
                 if (randomSound == 1) {
                     soundA.play();
@@ -124,6 +122,9 @@ $(document).ready(function() {
                 } else if (difficulty > 30) {
                     interval = 300;
                 }
+
+                $("#score").text(score);
+
 
 
                 difficulty++;
