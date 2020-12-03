@@ -57,7 +57,7 @@ $(document).ready(function() {
             addHead();
             setInterval(clock, 1000);
         } else {
-            setInterval(clock, 0);
+            // setTimeout(clock, 0);
         }
     }
 
@@ -72,7 +72,8 @@ $(document).ready(function() {
                 hour += 1;
             }
         }
-        document.getElementById("timerJeu").innerHTML = hour + ":" + min + ":" + sec;
+        if (verifTimer)
+            document.getElementById("timerJeu").innerHTML = hour + ":" + min + ":" + sec;
     }
 
 
@@ -94,7 +95,7 @@ $(document).ready(function() {
         if ($(slotViser).text("")) {
             // On ajoute l'image dans le html
             $(slotViser).append(headArray[randomHead]);
-            // $(".imgHead").fadeIn(400);
+            $(".imgHead").fadeIn(400);
 
             // si on clique sur une tête, le score augmente.
             $(slotViser).children().click(function() {
@@ -113,20 +114,19 @@ $(document).ready(function() {
                     score += 10;
                 } else if (difficulty <= 6) {
                     score += 20;
-                    interval = 1000;
+                    interval = 1300;
                 } else if (difficulty <= 10) {
                     score += 60;
-                    interval = 900;
+                    interval = 1100;
                 } else if (difficulty <= 20) {
                     score += 100;
                     interval = 800;
-                } else {
-                    interval = 700;
+                } else if (difficulty <= 30) {
+                    interval = 600;
+                } else if (difficulty <= 40) {
+                    interval = 400;
                 }
 
-                if (score > 1000) {
-                    interval = 600;
-                }
 
                 difficulty++;
 
@@ -153,12 +153,13 @@ $(document).ready(function() {
             // si c'est déjà vide on fait rien.
 
         } else {
-            // $(slotImage).children().fadeOut(200);
-            $(slotImage).empty();
+            $(slotImage).children().fadeOut(400);
+            // $(slotImage).empty();
             vie--;
 
             if (vie == 0) {
                 verifTimer = false;
+                activateClock();
                 $("#startGame").text("Rejouer");
             }
             console.log(vie);

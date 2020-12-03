@@ -33,7 +33,7 @@ body {
 .imgHead {
     height: 120px;
     width: 120px;
-    /* display: none; */
+    display: none;
     /* opacity: 0; */
 }
 
