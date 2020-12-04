@@ -117,10 +117,8 @@ $(document).ready(function() {
                 } else if (difficulty <= 20) {
                     score += 100;
                     interval = 800;
-                } else if (difficulty <= 30) {
+                } else {
                     interval = 600;
-                } else if (difficulty > 30) {
-                    interval = 550;
                 }
 
                 $("#score").text(score);
