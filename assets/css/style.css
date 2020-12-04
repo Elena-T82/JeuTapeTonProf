@@ -1,6 +1,27 @@
+@font-face {
+    font-family: "Sketch3d";
+    src: url("../fonts/sketch_3d/Sketch\ 3D.otf");
+}
+
+@font-face {
+    font-family: "OrangeJuice";
+    src: url("../fonts/orange_juice/orange\ juice\ 2.0.ttf");
+}
+
+@font-face {
+    font-family: "CaviarDreams";
+    src: url("../fonts/caviar_dreams/CaviarDreams.ttf");
+}
+
 body {
     background-color: #e9cd9c;
+    font-family: "CaviarDreams";
     height: 100vh;
+}
+
+h2 {
+    font-family: "OrangeJuice";
+    font-size: 50px;
 }
 
 #boardGame {
@@ -13,29 +34,19 @@ body {
     background-color: #e9cd9c;
 }
 
-.circleSize {
-    width: 100px;
-    height: 100px;
-}
-
-.heightJeu {
-    height: 150px;
-}
-
 .imgTable {
     background-image: url(../img/bureau.PNG);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
-    height: 12em;
+    height: 34%;
 }
 
 .imgHead {
-    height: 120px;
-    width: 120px;
+    height: 110px;
+    width: 110px;
     display: none;
-    /* opacity: 0; */
 }
 
 .buttonRulesAndStart {
@@ -54,6 +65,7 @@ body {
 #chronoPoints {
     position: absolute;
     font-size: 20px;
+    color: white;
 }
 
 .imgContainer {
@@ -64,11 +76,22 @@ body {
     background-position: center;
 }
 
-#gameTitle {
+.gameTitle {
     margin-top: 40px;
-    font-size: 30px;
-    background-color: white;
-    border: black solid 1px;
+    background-color: rgba(255, 255, 255, 0.637);
+    border: black 4px;
+    border-style: double;
+    border-radius: 10px;
+    font-family: "Sketch3d";
+}
+
+.gameTitleJeu {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.637);
+    border: black 4px;
+    border-style: double;
+    border-radius: 10px;
+    font-family: "Sketch3d";
 }
 
 .rules {
@@ -84,4 +107,34 @@ body {
     width: 300px;
     height: auto;
     cursor: pointer;
+    border: grey 1px solid;
+}
+
+@media screen and (max-width: 450px) {
+    .imgHead {
+        height: 80px;
+        width: 80px;
+        display: none;
+    }
+    h1,
+    h2 {
+        font-size: 30px;
+    }
+    #qrcode {
+        width: 150px;
+        height: auto;
+    }
+    p {
+        font-size: 15px;
+    }
+    #chronoPoints {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #chronoPoints p {
+        color: black;
+        background-color: rgba(255, 255, 255, 0.438);
+    }
 }

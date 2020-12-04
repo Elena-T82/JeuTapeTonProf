@@ -33,16 +33,17 @@
 
     <!-- Page d'accueil -->
     <div class="container-fluid imgContainer" id="pageAcceuil">
-        <div class="row pb-2 mb-5">
+        <div class="row pb-2 mb-4">
             <div class="col-12 d-flex justify-content-center">
-                <p id="gameTitle" class="p-4 text-center">Tape ton prof !</p>
+                <h1 class="p-3 text-center gameTitle">Tape ton prof !</h1>
             </div>
         </div>
 
         <div class="row rules pt-3 text-center m-auto">
             <div class="col-12 d-flex justify-content-center flex-column">
-                <p class="px-3 pt-3">Tu as toujours rêvé de taper ton professeur méchant ?! "Tape ton prof" te le permet ! Le but du jeu ressemble au tape taupe, mais c'est tes profs qu'il faut frapper (ça marche aussi avec les formateurs...) ! Les têtes de tes profs préférés
-                    apparaissent à l'écran de façon aléatoire. Déchaines-toi et tape le plus vite possible sur leurs têtes ! Le jeu est infini est s'arrête quand les profs auront eu raison de toi en étant trop rapide pour esquiver tes claques !
+                <p class="px-3 pt-3">Tu as toujours rêvé de taper ton professeur méchant ?! "Tape ton prof" te le permet ! Ce n'est pas des taupes sortant de leur trou qu'il faut attraper, mais délivrer les élèves qui se font embêté par leur professeur ! Les assaillants apparaissent
+                    à l'écran de façon aléatoire. Déchaine-toi et repousse-les le plus vite possible ! Le jeu est infini est s'arrête quand les profs auront eu raison de toi en étant trop rapide pour esquiver tes claques ! Attention, si 5 professeurs
+                    parviennent à mettre KO un élève, c'est perdu ! Combien de temps survivras-tu à l'invasion d'enseignant ?
                 </p>
                 <p class="px-3">Déchaîne-toi !!!</p>
             </div>
@@ -64,11 +65,17 @@
                 <button class="btn btn-success" data-target="#modalRegles" data-toggle="modal">Règles</button>
                 <button class="btn btn-success" id="startGame">Jouer !</button>
             </div>
-            <div class="d-flex text-white" id="chronoPoints">
-                <div class="border border-white p-2 m-2" id="timerJeu">00:00:00</div>
-                <div class="border border-white p-2 m-2" id="score">0</div>
+            <div class="d-flex" id="chronoPoints">
+                <div class="p-2 m-2">
+                    <p class="p-2">Temps : <span id="timerJeu">00:00:00</span></p>
+                </div>
+                <div class="p-2 m-2">
+                    <p class="p-2">Score : <span id="score">0</span></p>
+                </div>
             </div>
-            <div class="titleScore">Tape ton prof !!!</div>
+            <div class="titleScore">
+                <h1 class="gameTitleJeu p-2">Tape ton prof !!!</h1>
+            </div>
         </div>
 
         <div class="row text-center p-3" id="contentGames">
@@ -107,19 +114,18 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Les règles du jeu</h5>
+                    <h2 class="modal-title">Les règles du jeu</h2>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
                 </div>
                 <div class="modal-body">
                     <p class="text-justify">
-                        Tu as toujours rêvé de taper ton pote méchant ?! "Tape ton pote" te le permet ! Le but du jeu ressemble au tape taupe, mais c'est tes potes qu'il faut frapper (ça marche aussi avec les formateurs...) ! Les têtes de tes potes préférés apparaissent à l'écran
-                        de façon aléatoire. Déchaines-toi et tape le plus vite possible sur leurs têtes ! Le jeu est infini est s'arrête quand les potes auront eu raison de toi en étant trop rapide pour esquiver tes claques !
+                        Tu as toujours rêvé de taper ton professeur méchant ?! "Tape ton prof" te le permet ! Ce n'est pas des taupes sortant de leur trou qu'il faut attraper, mais délivrer les élèves qui se font embêté par leur professeur ! Les assaillants apparaissent à l'écran
+                        de façon aléatoire. Déchaine-toi et repousse-les le plus vite possible ! Le jeu est infini est s'arrête quand les profs auront eu raison de toi en étant trop rapide pour esquiver tes claques ! Attention, si 5 professeurs parviennent
+                        à mettre KO un élève, c'est perdu ! Combien de temps survivras-tu à l'invasion d'enseignant ?
                     </p>
-                    <p>
-                        Déchaîne-toi !!!
-                    </p>
+                    <p class="px-3">Déchaîne-toi !!!</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
@@ -133,7 +139,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title text-center">Vous avez perdu !</h5>
+                    <h2 class="modal-title text-center">Vous avez perdu !</h2>
                 </div>
                 <div class="modal-body">
                     <p class="text-justify">
