@@ -120,7 +120,7 @@ $(document).ready(function() {
                 } else if (difficulty <= 30) {
                     interval = 600;
                 } else if (difficulty > 30) {
-                    interval = 300;
+                    interval = 450;
                 }
 
                 $("#score").text(score);
