@@ -118,8 +118,10 @@ $(document).ready(function() {
                     score += 100;
                     interval = 800;
                 } else if (difficulty <= 30) {
+                    score += 150;
                     interval = 600;
                 } else {
+                    score += 200;
                     interval = 580;
                 }
 
